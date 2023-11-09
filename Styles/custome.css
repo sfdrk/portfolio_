@@ -1,0 +1,46 @@
+.orange{
+    color:#FF2E00 !important; 
+}
+
+.header{
+    align-items:center;
+}
+
+.header a img{
+    width:75;
+} 
+.submit-form{
+box-sizing: border-box;
+width: 400px;
+height: 60px;
+font-size: 12px;
+line-height: 16px;
+/* background-color: transparent; */
+background: #2F2E2D;
+/* border: 1px solid #080808; */
+padding: 22px 20px;
+margin-bottom: 10px;
+transition: 0.4s ease-in-out;
+text-align: center;
+}
+.submit-form:hover{
+    background-color: #FF2E00;
+    text-decoration: none;
+}
+
+.home-page h6{
+    /* color: #FF2E00; */
+}
+
+/* .my-channel-content{
+    padding-top:2rem;
+} */
+
+@media (max-width:600px){
+    .about-me{
+        padding:0 15px;
+    }
+    .footer{
+        padding-top:80px;
+    }
+}

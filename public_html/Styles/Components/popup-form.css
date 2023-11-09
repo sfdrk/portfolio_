@@ -1,0 +1,153 @@
+select { -webkit-appearance: none; appearance: none; }
+
+.popup-form{
+    position: fixed !important;
+    top: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    z-index: 2;
+    transition: 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+.popup-form.active { opacity: 1; pointer-events: all; }
+
+.form__container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 708px;
+    /* max-height: 668px; */
+    max-height: 390px;
+    width: 100%;
+    height: 100%;
+    background: #8C8C8C;
+    padding: 20px;
+    margin: 0 20px;
+    z-index: 2;
+}
+
+.form-menu{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 104px;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-menu.active{
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-menu > label{
+    margin-bottom: 15px;
+}
+
+.form__input > input:last-child:hover{ background-color: #FF2E00; }
+
+.form-menu > h4{
+    font-size: 65px;
+    line-height: 78px;
+    margin: 60px 0 25px;
+}
+
+.form__input > .select-wrapper{ position: relative; }
+
+.form__input > .select-wrapper::after {
+    content: url("../../Images/Icons/Arrow-form.svg");
+    transform: translate(-50%, -50%);
+    top: 30px;
+    right: 20px;
+    color: #fff;
+    position: absolute;
+}
+
+.form__input > input, .form__input > .select-wrapper > select{
+    box-sizing: border-box;
+    width:400px;
+    height: 60px;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: transparent;
+    border: 1px solid #080808;
+    padding: 22px 20px;
+    margin-bottom: 10px;
+    transition: 0.4s ease-in-out;
+}
+
+.form__input > input:last-child{
+    background: #2F2E2D;
+    border: 0;
+    margin: 20px 0 60px 0;
+}
+
+.form__input > input:focus, .form__input > select:focus{
+    outline: 0;
+    border: 1px solid #ECECEC;
+}
+
+.form__input > input::placeholder{ color: rgba(236, 236, 236, 0.5);
+}
+
+option{ color: #000; }
+
+.close{ align-self: flex-end; }
+.close > img:hover{ filter: invert(); }
+
+.successful-menu{
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.successful-menu.active{
+    display: flex;
+    opacity: 1;
+}
+
+.successful-menu > h4{
+    font-family: 'NeutralFace';
+    font-size: 60px;
+    line-height: 78px;
+    margin-top: 60px;
+}
+
+.successful-menu > p{
+    margin-top: 24px;
+    max-width: 226px;
+    text-align: center;
+}
+
+.successful-menu > img{
+    margin-top: 60px;
+}
+
+.got-it{
+    max-width: 400px;
+    width: 100%;
+    padding: 22px 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+    background-color: #FF2E00;
+    margin: 60px 0;
+}
+
+.got-it:hover{
+    border-radius: 0;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
